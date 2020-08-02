@@ -1,4 +1,140 @@
+:root {
+	--grey-color: #716b70;
+	--pink-color: #e52d87;
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: AvantGarde-Demi,sans-serif;
+}
+
+body {
+	background-image: url("../img/bg-angle-down.svg");
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 40%;
+}
+
+/* Clear button default style */
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+button:focus {
+	border: none;
+	outline: none;
+}
+
+/* Fixed Header */
+
+.searchArea {
+	position: absolute;
+	top: -100%;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+
+.main-container {
+	margin-top: 300px;
+}
+
+
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 30px;
+}
+
+.header-logo {
+	width: 32px;
+}
+
+.header-buttons {
+	display: flex;
+	align-items: center;
+}
+
+.donate-button {
+	color: var(--pink-color);
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 30px 20px;
+	transition: 0.2s;
+}
+
+.donate-button:hover {
+	color: white;
+	background-color: var(--pink-color);
+}
+
+.header-search-button {
+	font-size: 1.3em;
+	margin-left: 35px;
+	color: var(--grey-color);
+}
+
+.header-menu-button {
+	margin-left: 35px;
+	width: 36px;
+	height: 36px;
+}
+
+.header-menu-button .bars {
+	display: block;
+	background-color: var(--grey-color);
+	width: 100%;
+	height: 1px;
+}
+
+.header-menu-button .bars::before,
+.header-menu-button .bars::after {
+	display: block;
+	top: -10px;
+	content: "";
+	position: relative;
+	background-color: var(--grey-color);
+	height: 1px;
+
+	transition: all 0.2s;
+}
+
+.header-menu-button .bars::after {
+	top: 10px;
+}
+
+.header-menu-button:hover .bars::before,
+.header-menu-button:hover .bars::after {
+	height: 2px;
+	transform: rotate(90deg) translate(10px, 0px);
+}
+
+.header-menu-button:hover .bars::after {
+	transform: rotate(90deg) translate(-10px, 0px);
+}
+
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+.dropdown-content {
+	display: none;
 }
