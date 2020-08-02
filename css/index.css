@@ -1,6 +1,9 @@
 .presentation {
 	padding: 100px 50px;
-	background-image: url("../img/dream_big_high.jpg");
+	background-image: url("../img/road-medium.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
 	color: white;
 }
 
