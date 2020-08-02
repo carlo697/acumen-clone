@@ -26,19 +26,82 @@
 	transform: skewX(20deg);
 
 	transition: all 0.5s;
+	margin-left: 20px;
 }
 
 .presentation-button:hover {
-	transform: skewX(20deg) scale(1.5);
+	transform: skewX(20deg) scale(1.4);
 }
 
 .presentation-button .text {
-	display: table;
+	display: block;
 	transform: skewX(-20deg);
 
 	transition: all 0.5s;
 }
 
 .presentation-button:hover .text {
-	transform: skewX(-20deg) scale(calc(1 / 1.5));
+	transform: skewX(-20deg) scale(calc(1 / 1.4));
+}
+
+/* Newsletter */
+
+.newsletter {
+	padding: 80px 50px;
+	background-color: var(--gray-background);
+	color: white;
+	font-size: 2em;
+}
+
+.newsletter-fieldset {
+	border: none;
+}
+
+.newsletter-fieldset > div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.newsletter legend {
+	text-align: center;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.newsletter input {
+	color: white;
+	flex-basis: 100%;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 0px;
+	padding: 10px;
+	margin-bottom: 10px;
+	outline: none;
+}
+
+.newsletter input:focus {
+	background-color: white;
+	color: black;
+}
+
+.newsletter button {
+	display: block;
+	color: white;
+	padding: 20px 50px;
+	transform: skewX(20deg);
+	outline: 2px solid white;
+
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+
+.newsletter button:hover {
+	outline: none;
+	background-color: var(--pink-color);
+}
+
+.newsletter button .text {
+	display: block;
+	transform: skewX(-20deg);
 }
