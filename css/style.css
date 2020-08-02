@@ -130,7 +130,7 @@ button:focus {
 
 /* Search box */
 
-.search-area {
+#searchArea {
 	position: absolute;
 	top: -100%;
 	right: 0px;
@@ -138,10 +138,56 @@ button:focus {
 	width: 100%;
 
 	background-color: var(--pink-color);
+	color: white;
+
+	padding: 0px 40px;
+
+	display: flex;
+	align-items: center;
 
 	transition: top 0.5s;
 }
 
-.search-area.active {
+.header-search-form {
+	flex-grow: 1;
+
+	display: flex;
+
+	border-bottom: 2px solid white;
+	margin-top: 10px;
+}
+
+.header-search-text {
+	flex-grow: 1;
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-size: 1.2em;
+
+}
+
+.header-search-text::placeholder {
+	color: rgba(255, 255, 255, 75%);
+}
+
+.header-search-text:focus,
+ .header-search-text:active{
+	outline: none;
+	background-color: transparent;
+}
+
+.header-search-form button {
+	color: white;
+	font-size: 1.4em;
+	margin-bottom: 5px;
+}
+
+#closeSearchButton {
+	margin-left: 40px;
+	font-size: 2em;
+	color: white;
+}
+
+#searchArea.active {
 	top: 0;
 }
