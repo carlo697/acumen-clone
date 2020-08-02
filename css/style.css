@@ -33,21 +33,13 @@ button:focus {
 	outline: none;
 }
 
-/* Fixed Header */
-
-.searchArea {
-	position: absolute;
-	top: -100%;
-	right: 0px;
-	height: 100%;
-	width: 100%;
-}
-
+/* Document */
 
 .main-container {
 	margin-top: 300px;
 }
 
+/* Fixed Header */
 
 .main-header {
 	position: fixed;
@@ -55,6 +47,12 @@ button:focus {
 	left: 0;
 	width: 100%;
 	padding: 10px 30px;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .header-logo {
@@ -126,15 +124,24 @@ button:focus {
 	transform: rotate(90deg) translate(-10px, 0px);
 }
 
-
-.header-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-
-
 .dropdown-content {
 	display: none;
+}
+
+/* Search box */
+
+.search-area {
+	position: absolute;
+	top: -100%;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+
+	background-color: var(--pink-color);
+
+	transition: top 0.5s;
+}
+
+.search-area.active {
+	top: 0;
 }
