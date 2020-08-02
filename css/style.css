@@ -20,6 +20,10 @@ body {
 	background-size: 40%;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* Clear button default style */
 
 button {
