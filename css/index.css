@@ -1,0 +1,41 @@
+.presentation {
+	padding: 100px 50px;
+	background-image: url("../img/dream_big_high.jpg");
+	color: white;
+}
+
+.presentation h1 {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+.presentation p {
+	font-size: 1em;
+	margin-bottom: 20px;
+}
+
+.presentation-button {
+	display: inline-block;
+	background-color: var(--pink-color);
+	padding: 10px 20px;
+	color: white;
+	text-transform: uppercase;
+	transform: skewX(20deg);
+
+	transition: all 0.5s;
+}
+
+.presentation-button:hover {
+	transform: skewX(20deg) scale(1.5);
+}
+
+.presentation-button .text {
+	display: table;
+	transform: skewX(-20deg);
+
+	transition: all 0.5s;
+}
+
+.presentation-button:hover .text {
+	transform: skewX(-20deg) scale(calc(1 / 1.5));
+}
