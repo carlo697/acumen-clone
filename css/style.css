@@ -4,6 +4,7 @@
 	--dark-blue: #002f71;
 	--light-blue-hover: rgb(242, 245, 248);
 	--gray-background: rgb(50, 43, 43);
+	--menu-width: 300px;
 }
 
 * {
@@ -44,6 +45,10 @@ button:focus {
 .main-container {
 	position: absolute;
 	margin-top: 300px;
+	width: 100vw;
+
+	right: 0px;
+	transition: right 1s;
 }
 
 /* Fixed Header */
@@ -51,10 +56,19 @@ button:focus {
 .main-header {
 	position: fixed;
 	top: 0;
+	right: 0;
 	width: 100%;
 	padding: 10px 30px;
 
 	z-index: 100;
+
+	transition: all 0.5s, right 1s;
+	background-color: transparent;
+}
+
+.main-header.sticky {
+	background-color: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 25%);
 }
 
 .header-nav {
@@ -211,11 +225,14 @@ button:focus {
 	width: 0px;
 	height: 100%;
 
-	overflow: auto;
+	transition: width 1s;
+
+	overflow: hidden;
 }
 
-.menu .container {
-	width: 350px;
+.menu-container {
+	width: var(--menu-width);
+	height: 100%;
 
 	background-color: white;
 
@@ -341,14 +358,23 @@ button:focus {
 
 /* Off-canvas menu functionality*/
 
+body {
+	overflow: auto;
+}
+
 body.menu-active {
 	overflow: hidden;
 }
 
 body.menu-active .menu {
-	width: 350px;
+	width: var(--menu-width);
+	overflow: auto;
 }
 
 body.menu-active .main-header {
-	right: 350px;
+	right: var(--menu-width);
+}
+
+body.menu-active .main-container {
+	right: var(--menu-width);
 }

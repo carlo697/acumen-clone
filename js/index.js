@@ -9,6 +9,10 @@ var searchArea = document.getElementById("searchArea");
 var headerMenuButton = document.getElementById("headerMenuButton");
 headerMenuButton.onclick = openOffCanvasMenu;
 
+document.body.onscroll = onBodyScroll;
+
+var mainHeader = document.getElementById("mainHeader");
+
 function openSearchBox() {
 	searchArea.classList.add("active");
 }
@@ -25,6 +29,14 @@ function openOffCanvasMenu() {
 	else
 	{
 		document.body.classList.add("menu-active");
+	}	
+}
+
+function onBodyScroll () {
+	if (window.scrollY > 0) {
+		mainHeader.classList.add("sticky");
 	}
-	
+	else {
+		mainHeader.classList.remove("sticky");
+	}
 }
