@@ -42,6 +42,7 @@ button:focus {
 /* Document */
 
 .main-container {
+	position: absolute;
 	margin-top: 300px;
 }
 
@@ -50,7 +51,6 @@ button:focus {
 .main-header {
 	position: fixed;
 	top: 0;
-	left: 0;
 	width: 100%;
 	padding: 10px 30px;
 }
@@ -202,12 +202,18 @@ button:focus {
 
 
 /* Off Canvas Menu */
-.menu-container {
+.menu {
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	width: 350px;
+	width: 0px;
 	height: 100%;
+
+	overflow: auto;
+}
+
+.menu .container {
+	width: 350px;
 
 	background-color: white;
 
@@ -220,8 +226,6 @@ button:focus {
 	padding-top: 20px;
 
 	font-size: 1.4em;
-
-	overflow: auto;
 }
 
 .menu-button-border {
@@ -331,4 +335,18 @@ button:focus {
 
 .menu-social .icon:hover {
 	color: var(--pink-color);
+}
+
+/* Off-canvas menu functionality*/
+
+body.menu-active {
+	overflow: hidden;
+}
+
+body.menu-active .menu {
+	width: 350px;
+}
+
+body.menu-active .main-header {
+	right: 350px;
 }
