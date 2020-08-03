@@ -335,11 +335,11 @@ button:focus {
 
 .menu-social {
 	flex-basis: 100%;
-	flex-grow: 1;
 	background-color: var(--gray-background);
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	padding: 10px 0px 50px 20px;
 }
