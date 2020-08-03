@@ -127,24 +127,34 @@
 	margin-bottom: 30px;
 }
 
-.footer-link-container {
+.footer-link-area {
 	flex-basis: 100%;
 
 	display: flex;
 	justify-content: center;
 }
 
-.footer-link-container a {
+.footer-link-area a {
 	display: block;
 	text-align: center;
 	margin-bottom: 20px;
 	color: white;
 	border-bottom: 1px solid white;
 	text-transform: uppercase;
+	transition: border 0.5s;
 }
 
-.footer-link-container a .fa-arrow-right {
+.footer-link-area a:hover {
+	border-bottom: 1px solid var(--pink-color);
+}
+
+.footer-link-area a .fa-arrow-right {
 	margin-right: 10px;
+	transition: transform 0.5s;
+}
+
+.footer-link-area a:hover .fa-arrow-right {
+	transform: translateX(8px);
 }
 
 .footer .menu-social {
@@ -168,4 +178,8 @@
 
 	color: var(--grey-color);
 	margin-bottom: 25px;
+}
+
+.footer-links-area a:hover {
+	color: var(--pink-color);
 }
