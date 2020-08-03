@@ -74,11 +74,12 @@
 	color: white;
 	flex-basis: 100%;
 	background-color: transparent;
-	border: 1px solid white;
+	/*border: 1px solid white;*/
+	border: none;
+	outline: 1px solid white;
 	border-radius: 0px;
 	padding: 20px;
 	margin-bottom: 10px;
-	outline: none;
 	font-size: 0.5em;
 }
 
@@ -107,6 +108,23 @@
 	display: block;
 	transform: skewX(-20deg);
 }
+
+
+@media all and (min-width: 800px) {
+	.newsletter input {
+		flex-basis: 0%;
+		width: 200px;
+		transform: skewX(20deg);
+		margin: 0px;
+	}
+
+	.newsletter button {
+		flex-basis: 50px;
+		padding: 0px 10px;
+		outline: 1px solid white;
+	}
+}
+
 
 /* Footer */
 
@@ -224,7 +242,7 @@
 	}
 }	
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
 	.footer .menu-social {
 		flex-basis: 0%;
 		padding: 0px;
