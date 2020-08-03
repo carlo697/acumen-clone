@@ -51,6 +51,7 @@
 	background-color: var(--gray-background);
 	color: white;
 	font-size: 2em;
+	width: 100%;
 }
 
 .newsletter-fieldset {
@@ -75,9 +76,10 @@
 	background-color: transparent;
 	border: 1px solid white;
 	border-radius: 0px;
-	padding: 10px;
+	padding: 20px;
 	margin-bottom: 10px;
 	outline: none;
+	font-size: 0.5em;
 }
 
 .newsletter input:focus {
@@ -90,7 +92,7 @@
 	color: white;
 	padding: 20px 50px;
 	transform: skewX(20deg);
-	outline: 2px solid white;
+	outline: 1px solid white;
 
 	text-transform: uppercase;
 	transition: all 0.3s;
@@ -104,4 +106,66 @@
 .newsletter button .text {
 	display: block;
 	transform: skewX(-20deg);
+}
+
+/* Footer */
+
+.footer {
+	background-color: var(--gray-background);
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+
+	font-size: 1.2em;
+
+	padding-bottom: 50px;
+}
+
+.footer-logo {
+	width: 100px;
+	margin-bottom: 30px;
+}
+
+.footer-link-container {
+	flex-basis: 100%;
+
+	display: flex;
+	justify-content: center;
+}
+
+.footer-link-container a {
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	color: white;
+	border-bottom: 1px solid white;
+	text-transform: uppercase;
+}
+
+.footer-link-container a .fa-arrow-right {
+	margin-right: 10px;
+}
+
+.footer .menu-social {
+	font-size: 1.5em;
+}
+
+.footer-links-area {
+	flex-basis: 100%;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-links-area a {
+	display: inline-block;
+	flex-basis: 100%;
+	flex-grow: 1;
+	text-align: center;
+
+	color: var(--grey-color);
+	margin-bottom: 25px;
 }
