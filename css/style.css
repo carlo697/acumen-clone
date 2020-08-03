@@ -67,7 +67,7 @@ button:focus {
 
 .main-header.sticky {
 	background-color: white;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 25%);
+	box-shadow: 0px 5px 2px rgba(0, 0, 0, 25%);
 }
 
 .header-nav {
@@ -217,6 +217,7 @@ button:focus {
 
 
 /* Off Canvas Menu */
+
 .menu {
 	position: fixed;
 	top: 0px;
@@ -368,6 +369,7 @@ body.menu-active {
 body.menu-active .menu {
 	width: var(--menu-width);
 	overflow: auto;
+	box-shadow: -4px 0px 5px rgba(0, 0, 0, 25%);
 }
 
 body.menu-active .main-header {
